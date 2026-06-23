@@ -6,11 +6,32 @@ import os
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 POWERBI_URL = "https://app.powerbi.com/view?r=eyJrIjoiY2Y4ZDFkYjItZDhkZS00ZmI1LTkxYTYtYTI0NjYxZGIzNjlmIiwidCI6IjM3MzAxNmY4LTc5YTktNGVlZC04MGQyLTEwMGNlOTQ4ZDk2MCIsImMiOjl9"
 
+st.set_page_config(
+    page_title="Alzheimer Predict",
+    layout="wide"
+)
+
+with st.sidebar:
+
+    st.markdown("""
+### Comment utiliser ?
+1. Renseignez les scores cognitifs
+2. Renseignez les signes vitaux
+3. Renseignez les mesures biologiques
+4. Cliquez sur **Calculer**
+""")
+
+    st.warning(
+        "⚠️ Avertissement : Cet outil est une aide à la décision. Il ne remplace pas le diagnostic médical."
+    )
+
+    st.link_button(
+        "Dashboard Power BI",
+        POWERBI_URL,
+        use_container_width=True
+    )
 
 st.title("Prédiction précoce de la maladie d'Alzheimer")
-
-
-st.link_button("Consulter le dashboard Power BI",POWERBI_URL)
 
 st.write("Veuillez renseigner les caractéristiques du patient pour obtenir une estimation du risque.")
 

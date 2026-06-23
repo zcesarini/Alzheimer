@@ -115,9 +115,11 @@ Analyse statistique et visuelle :
 
     Fusion des 10 tables
 
-    Nettoyage & imputation
+    Nettoyage & imputation des valeurs manquantes
 
     Encodage des variables catégorielles
+
+    Feature Engineering
 
     Normalisation si nécessaire
 

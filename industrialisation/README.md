@@ -46,7 +46,16 @@ Code
 
 ```
 ## Lancement rapide
+Avant de lancer l'application, définir les variables d'environnement suivantes :
 
+```Windows Bash
+setx SUPABASE_URL "https://********.supabase.co"
+setx SUPABASE_SERVICE_ROLE_KEY "***********"
+```
+```MacOS Bash
+export SUPABASE_URL="https://********.supabase.co"
+export SUPABASE_SERVICE_ROLE_KEY="***********"
+```
 1. Activer l'environnement virtuel :
 
 ```powershell
